@@ -1,0 +1,25 @@
+{
+  "name": "node-fire",
+  "version": "1.0.0",
+  "description": "A simple playground for working with NodeJS and (Express-)Handlebars",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJS",
+    "ExpressJS",
+    "Handlebars",
+    "Firebolt"
+  ],
+  "author": "Arka Sain <arka.sain@aol.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "nodemon": "^2.0.7",
+    "serve-favicon": "^2.5.0"
+  }
+}
