@@ -6,6 +6,9 @@ const express = require('express');
 const favicon = require('serve-favicon');
 const bodyParser = require('body-parser');
 
+/* Import Routes */
+const userRoutes = require('./routes/user');
+
 /* Import for express-handlebars */
 const expressHbs = require('express-handlebars');
 
@@ -27,8 +30,11 @@ app.engine('hbs', expressHbs({ layoutsDir: 'views/layout', defaultLayout: 'main'
 app.set('view engine', 'hbs');
 app.set('views', 'views');
 
+/* Registering MWs for routes */
+app.use(userRoutes.routes);
+
 app.use((req, res, next) => {
-  res.status(404).render('404', { pageTitle: '404 - PNF', path: null });
+  res.status(404).render('index', { pageTitle: '404 - PNF', path: null });
 });
 
 app.listen(3000);
