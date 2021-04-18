@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 
 /* Import Routes */
 const userRoutes = require('./routes/user');
+const adminRoutes = require('./routes/admin');
 
 /* Import for express-handlebars */
 const expressHbs = require('express-handlebars');
@@ -32,9 +33,10 @@ app.set('views', 'views');
 
 /* Registering MWs for routes */
 app.use(userRoutes.routes);
+app.use(adminRoutes.routes);
 
 app.use((req, res, next) => {
-  res.status(404).render('index', { pageTitle: '404 - PNF', path: null });
+  res.status(404).render('index', { pageTitle: 'Node | Fire --- Welcome!', path: null });
 });
 
 app.listen(3000);

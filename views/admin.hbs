@@ -1,0 +1,13 @@
+<main>
+    {{#if hasUsers}}
+        <p>Available users: </p>
+
+        <ul>
+            {{#each users}}
+                <li>{{this.name}}</li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>No users available .....</p>
+    {{/if}}
+</main>

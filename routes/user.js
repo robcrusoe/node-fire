@@ -18,5 +18,6 @@ router.post('/add-user', (req, res, next) => {
 });
 
 module.exports = {
-    routes: router
+    routes: router,
+    users: users
 };
